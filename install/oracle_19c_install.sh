@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -e
-export INSTALL=$HOME/docker-oracle-ee-19c/install
+export INSTALL=$HOME/oracle_on_ol7/install
 echo `hostname -I|awk '{print $1}'` `hostname -s` `hostname` >> /etc/hosts
 
 echo "Installing Dependencies"
@@ -73,7 +73,7 @@ su oracle -c "$ORACLE_HOME/bin/netca -silent -responseFile $ORACLE_HOME/netca.rs
 
 
 echo "Configuring the TNS"
-sh $HOME/docker-oracle-ee-19c/install/tns.sh
+sh $HOME/oracle_on_ol7/install/tns.sh
 chown oracle:oinstall $ORACLE_HOME/network/admin/tnsnames.ora
 
 echo "Testing Database"
