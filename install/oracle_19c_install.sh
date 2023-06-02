@@ -88,10 +88,6 @@ select name,open_mode from v\$database;
 show pdbs;
 EOF
 
-echo "Cleaning up"
-rm -rf /home/oracle/database /tmp/*
-echo "Configure environment for Oracle user"
-
 cat > ~/.bashrc <<EOF
 # Oracle Settings
 export TMP=/tmp
@@ -108,6 +104,9 @@ export PATH=\$ORACLE_HOME/bin:\$PATH
 export LD_LIBRARY_PATH=\$ORACLE_HOME/lib:/lib:/usr/lib
 export CLASSPATH=\$ORACLE_HOME/jlib:\$ORACLE_HOME/rdbms/jlib
 EOF
+echo "Cleaning up"
+rm -rf /home/oracle/database /tmp/*
+echo "Configure environment for Oracle user"
 
 source ~/.bashrc
 echo "DataBase Installed!!!"
