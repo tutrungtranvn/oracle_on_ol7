@@ -1,7 +1,7 @@
 # Install Oracle with OL7 (Oracle Linux 7) on AWS EC2
 ## Pre-install
 ```
-[oracle@ip-10-0-19-6  ~]# yum update
+yum update
 ```
 Check the status and version of GitHub if it is installed.
 ```
@@ -33,7 +33,9 @@ Unpacking objects: 100% (12/12), done.
 ## Install Oracle
 Run syntax 
 ```
-[oracle@ip-10-0-19-6  ~]# chmod u+x $HOME/oracle_on_ol7/install/oracle_19c_install.sh
-
-[oracle@ip-10-0-19-6  ~]# sh $HOME/oracle_on_ol7/install/oracle_19c_install.sh
+chmod u+x $HOME/oracle_on_ol7/install/oracle_19c_install.sh
+```
+and
+```
+sh $HOME/oracle_on_ol7/install/oracle_19c_install.sh
 ```
