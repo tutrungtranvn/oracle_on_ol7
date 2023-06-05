@@ -12,6 +12,12 @@ libXtst.i686 libXtst.x86_64 make.x86_64 sysstat.x86_64 oracle-database-preinstal
 
 rm -rf /var/cache/yum
 
+echo "Configure users!"
+groupadd -g 54321 oinstall
+groupadd -g 54322 dba
+groupadd -g 54323 oper
+useradd -u 54321 -g oinstall -G dba,oper oracle
+
 echo "Creating Directory"
 rm -rf /u01
 mkdir -p /u01 && mkdir -p /u01/app/oracle/product/19.0.0/dbhome_1 && chown -R oracle:oinstall /u01 && chmod -R 775 /u01
