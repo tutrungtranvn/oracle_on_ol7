@@ -1,5 +1,17 @@
 # Install Oracle with OL7 (Oracle Linux 7) on AWS EC2
 ## Pre-install
+Login with root user
+```
+sudo su
+```
+Create ``oracle`` user if it isn't exist.
+```
+useradd -m oracle 
+```
+Grant permission for oracle
+```
+chmod -R 777 /home/oracle
+```
 ```
 yum update
 ```
