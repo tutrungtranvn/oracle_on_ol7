@@ -4,14 +4,7 @@ Login with root user
 ```
 sudo su
 ```
-Create ``oracle`` user if it isn't exist.
-```
-useradd -m oracle 
-```
-Grant permission for oracle
-```
-chmod -R 777 /home/oracle
-```
+
 ```
 yum update
 ```
