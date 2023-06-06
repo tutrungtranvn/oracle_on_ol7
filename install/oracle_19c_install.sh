@@ -34,7 +34,7 @@ export ORACLE_SID=ORCL19 >> /home/oracle/.bash_profile
 export ORACLE_HOME=/u01/app/oracle/product/19.0.0/dbhome_1 >> /home/oracle/.bash_profile
 export PATH=$ORACLE_HOME/bin:$PATH >> /home/oracle/.bash_profile
 
-
+su oracle -c "source ~/.bash_profile"
 #Download oracle database zip
 echo "Downloading oracle database zip"
 wget -q --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1QinowHmGgiOCdj-OO20qaTQGHfYN2u6M' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1QinowHmGgiOCdj-OO20qaTQGHfYN2u6M" -O oracle_database.zip && rm -rf /tmp/cookies.txt
@@ -94,27 +94,12 @@ select name,open_mode from v\$database;
 show pdbs;
 EOF
 
-cat > ~/.bashrc <<EOF
-# Oracle Settings
-export TMP=/tmp
-export TMPDIR=\$TMP
 
-export ORACLE_SID=ORCL19
-export ORACLE_BASE=/u01/app/oracle
-export ORACLE_HOME=/u01/app/oracle/product/19.0.0/dbhome_1
-export PATH=$ORACLE_HOME/bin:$PATH
-
-export PATH=/usr/sbin:/usr/local/bin:\$PATH
-export PATH=\$ORACLE_HOME/bin:\$PATH
-
-export LD_LIBRARY_PATH=\$ORACLE_HOME/lib:/lib:/usr/lib
-export CLASSPATH=\$ORACLE_HOME/jlib:\$ORACLE_HOME/rdbms/jlib
-EOF
 echo "Cleaning up"
 rm -rf /home/oracle/database /tmp/*
 echo "Configure environment for Oracle user"
 
-source ~/.bashrc
+
 echo "DataBase Installed!!!"
 
 
