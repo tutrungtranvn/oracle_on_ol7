@@ -1,0 +1,42 @@
+ORCL19.__data_transfer_cache_size=0
+ORCL19.__db_cache_size=1124073472
+ORCL19.__inmemory_ext_roarea=0
+ORCL19.__inmemory_ext_rwarea=0
+ORCL19.__java_pool_size=0
+ORCL19.__large_pool_size=16777216
+ORCL19.__oracle_base='/u01/app/oracle'#ORACLE_BASE set from environment
+ORCL19.__pga_aggregate_target=536870912
+ORCL19.__sga_target=1610612736
+ORCL19.__shared_io_pool_size=83886080
+ORCL19.__shared_pool_size=369098752
+ORCL19.__streams_pool_size=0
+ORCL19.__unified_pga_pool_size=0
+*.audit_file_dest='/u01/app/oracle/admin/ORCL19/adump'
+*.audit_sys_operations=false
+*.audit_trail='none'
+*.compatible='19.0.0'
+*.control_files='/u01/app/oracle/oradata/ORCL19/control01.ctl','/u01/app/oracle/oradata/ORCL19/control02.ctl'#Restore Controlfile
+*.db_block_size=8192
+*.db_name='ORCL19'
+*.db_unique_name='STANDBY'
+*.diagnostic_dest='/u01/app/oracle'
+*.dispatchers='(PROTOCOL=TCP) (SERVICE=ORCL19XDB)'
+*.enable_pluggable_database=true
+*.fal_client='STANDBY'
+*.fal_server='ORCL19'
+*.log_archive_config='DG_CONFIG=(ORCL19,STANDBY)'
+*.log_archive_dest_1='location=/u01/archive valid_for=(all_logfiles,primary_role)'
+*.log_archive_dest_2='service=ORCL19 lgwr async noaffirm valid_for=(all_logfiles,primary_role) db_unique_name=ORCL19'
+*.log_archive_dest_state_1='ENABLE'
+*.log_archive_dest_state_2='ENABLE'
+*.log_archive_format='%t_%s_%r.arc'
+*.log_archive_max_processes=10
+*.nls_language='AMERICAN'
+*.nls_territory='AMERICA'
+*.open_cursors=300
+*.pga_aggregate_target=512m
+*.processes=320
+*.remote_login_passwordfile='EXCLUSIVE'
+*.sga_target=1536m
+*.standby_file_management='AUTO'
+*.undo_tablespace='UNDOTBS1'
