@@ -49,9 +49,13 @@ echo "setting up Response files"
 cp $INSTALL/oracle-19c-ee.rsp $ORACLE_HOME/oracle-19c-ee.rsp
 cp $INSTALL/dbca_19c.rsp $ORACLE_HOME/dbca_19c.rsp
 cp $INSTALL/netca.rsp $ORACLE_HOME/netca.rsp
+cp $INSTALL/initprod_primary.ora $ORACLE_HOME/initprod_primary.ora
+cp $INSTALL/initprod_standby.ora $ORACLE_HOME/initprod_standby.ora
 chmod 777 $ORACLE_HOME/oracle-19c-ee.rsp
 chmod 777 $ORACLE_HOME/dbca_19c.rsp
 chmod 777 $ORACLE_HOME/netca.rsp
+chmod 777 $ORACLE_HOME/initprod_primary.ora
+chmod 777 $ORACLE_HOME/initprod_standby.ora
 
 echo "Installing Oracle Binaries"
 
